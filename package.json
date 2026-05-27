@@ -1,0 +1,36 @@
+{
+  "name": "clmm-terminal",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.3.4",
+    "@capacitor/core": "^8.3.4",
+    "@rainbow-me/rainbowkit": "latest",
+    "@tanstack/react-query": "latest",
+    "autoprefixer": "^10.5.0",
+    "axios": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "postcss": "^8.5.14",
+    "react": "latest",
+    "react-dom": "latest",
+    "recharts": "latest",
+    "tailwindcss": "^3.4.19",
+    "typescript": "latest",
+    "viem": "latest",
+    "wagmi": "latest",
+    "zustand": "latest"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.3.4",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest"
+  }
+}

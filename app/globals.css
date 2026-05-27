@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface/80 backdrop-blur-xl border border-white/[0.06] rounded-2xl shadow-lg;
+  }
+  .glass-card {
+    @apply bg-elevated/60 backdrop-blur-md border border-white/[0.05] rounded-xl shadow-md;
+  }
+  .glass-input {
+    @apply bg-surface/60 backdrop-blur-md border border-white/[0.08] rounded-xl px-4 py-2.5 text-xs
+           focus:outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/20
+           transition-all placeholder:text-zinc-600;
+  }
+  .glass-select {
+    @apply appearance-none bg-surface/60 backdrop-blur-md border border-white/[0.08] rounded-xl px-4 py-2.5 text-xs
+           focus:outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/20
+           cursor-pointer transition-all;
+  }
+  .tech-tag {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-mono font-medium;
+  }
+  .glow-accent {
+    box-shadow: 0 0 20px -4px rgba(59, 130, 246, 0.15);
+  }
+  .glow-bull {
+    box-shadow: 0 0 20px -4px rgba(16, 185, 129, 0.15);
+  }
+  .glow-bear {
+    box-shadow: 0 0 20px -4px rgba(239, 68, 68, 0.15);
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #07080c;
+  color: #e2e8f0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 0% 5%, rgba(59, 130, 246, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 100% 25%, rgba(139, 92, 246, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 35% at 50% 85%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.25);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
