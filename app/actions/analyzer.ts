@@ -1,5 +1,3 @@
-'use server'
-
 export type PoolAnalysisResult = {
   poolAddress: string
   gaugeAddress: string
