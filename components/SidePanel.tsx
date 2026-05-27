@@ -155,6 +155,7 @@ export function SidePanel() {
                   capital={500}
                   isStable={category === 'STABLE'}
                   volatility={volatility}
+                  chain={pool?.chain}
                   onSelect={handleStrategySelect}
                   selectedId={strategyMode === 'conservative' ? 'passive-wide' : strategyMode === 'balanced' ? 'moderate' : strategyMode === 'aggressive' ? 'active-narrow' : 'stable-micro'}
                 />

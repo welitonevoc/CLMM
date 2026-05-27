@@ -125,10 +125,18 @@ export type LpStrategy = {
   name: string
   description: string
   rangeMultiplier: number
+  rangePct: number
   rebalanceFrequency: string
   bestFor: string
   riskLevel: 'baixo' | 'médio' | 'alto'
   feeTier: string
+  expectedApyRange: [number, number]
+  ilRisk: number
+  timeInRange: number
+  managementType: 'manual' | 'semi-auto' | 'automated'
+  gasCostPerRebalance: number
+  volatilityCap: number
+  feeTiers: string[]
 }
 
 export type WaterfallItem = {
@@ -151,6 +159,10 @@ export type PoolRecommendation = {
   reason: string
   matchScore: number
   category: PoolCategory
+  feeSustainability: number
+  volatilityScore: number
+  timeInRange: number
+  suggestedStrategy?: string
 }
 
 export type AppState = {
